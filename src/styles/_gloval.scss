@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.container {
+  position: relative;
+  padding: 20px;
+}
+
+
+header {
+  padding: 20px;
+  background: $ttn-greyLight;
+}
+.logo h2 {
+  margin:0
+}
+.logo a {
+  text-decoration: none;
+  color: $ttn-greyDark;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar{display: flex;}
+
+.navbar a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: $ttn-greyDark;
+}
+.cart-icon-menu {
+  position: relative;
+
+  span.item__total {
+    background: rgba($ttn-danger,.9);
+    padding: 5px;
+    border-radius: 100%;
+    color: $ttn-background-color;
+    font-size: .7rem;
+    /* padding: 5px; */
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 10px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+svg {
+  width: 25px;
+  height: 25px;
+}
+}

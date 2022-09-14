@@ -1,0 +1,49 @@
+.btn {
+    border: solid 1px $ttn-greyLight;
+    text-align: center;
+    padding: 20px 30px;
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: $ttn-greyLight;
+    cursor: pointer;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: rgba($ttn-greyLight, .7);
+    }
+}
+
+.btn.btn-primary {
+    background: $ttn-primary;
+    border-color: $ttn-primary;
+    color: $ttn-background-color;
+
+    &:hover{ 
+        background-color: rgba($ttn-primary, .7);
+    }
+}
+
+.btn.btn-success {
+    background: $ttn-success;
+    border-color: $ttn-success;
+    color: $ttn-background-color;
+
+    &:hover{ 
+        background-color: rgba($ttn-success, .7);
+    }
+}
+
+.btn-borrar {
+    border: none;
+    color: $ttn-greyMedium;
+&:hover{
+    background-color: $ttn-danger;
+    color: $ttn-background-color;
+}
+}

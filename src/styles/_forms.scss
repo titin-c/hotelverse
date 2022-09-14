@@ -1,0 +1,24 @@
+.form-group {
+    margin-bottom: 7px;
+
+    label {
+        color: $ttn-greyMedium;
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+}
+.form-control {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid $ttn-greyLight;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px;
+    background: $ttn-greyLight;
+}
+.form-check:last-child {
+    padding: 10px 20px 20px;
+}
