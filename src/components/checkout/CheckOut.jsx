@@ -92,13 +92,13 @@ const CheckOut = () => {
 
             <div className="form-check">
               <input className="form-check-input" type="radio" name="checkout-pay" id="tarjeta" value="tarjeta" />
-                <label className="form-check-label" for="tarjeta">
+                <label className="form-check-label" htmlFor="tarjeta">
                   Pago con tarjeta
                 </label>
             </div>
             <div className="form-check">
               <input className="form-check-input" type="radio" name="checkout-pay" id="transferencia" value="transferencia" />
-                <label className="form-check-label" for="transferencia">
+                <label className="form-check-label" htmlFor="transferencia">
                   Pago con Transferencia
                 </label>
             </div>

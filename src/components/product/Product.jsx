@@ -26,13 +26,15 @@ const Product = () => {
     return (
         <>
             <SideCart />
-            
+            <div className="breadcrumbs breadcrumbs2">
+                <BiLeftArrowAlt/> <Link to="/">Volver</Link>&nbsp;/&nbsp;{detalle.category}  
+                    </div>
             <div className="product-container">
                 <div className="product-image-container">
                     <img src={detalle.image} width="300px" height="300px" alt="" className="product-image" />
                 </div>
                 <div className="product-info-container">
-                <div className="breadcrumbs">
+                <div className="breadcrumbs breadcrumbs1">
                 <BiLeftArrowAlt/> <Link to="/">Volver</Link>&nbsp;/&nbsp;{detalle.category}  
                     </div>
                     <h1 className="product-title">{detalle.title}</h1>
