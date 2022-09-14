@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { BiCart } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import { DataContext } from "../context/DataProvider";
 
 const Header = () => {
@@ -17,11 +18,11 @@ const Header = () => {
       <div className="header-content">
         <div className="logo">
           <h2>
-            <a href="/">Hotelverse.</a>
+            <Link to="/">Hotelverse.</Link>
           </h2>
         </div>
         <div className="navbar">
-          <a href="/">Tienda</a>
+          <Link to="/">Tienda</Link>
           <div className="cart-icon-menu"
             onClick={toogleCart}
           >

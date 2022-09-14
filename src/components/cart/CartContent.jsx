@@ -1,6 +1,7 @@
 import { DataContext } from "../../context/DataProvider";
 import { BiChevronUp, BiChevronDown, BiTrash } from "react-icons/bi";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export const CartContent = () => {
   const value = useContext(DataContext);
@@ -55,8 +56,8 @@ export const CartContent = () => {
       <div className="cart-total">{total}€</div>
       {/* botones para el chekout del carrito del side */}
       <div className='cart-footer'>
-        <a href="/cart" className="btn">Ver carrito</a>
-        <a href="/checkout" className="btn btn-success">Finalizar compra</a>
+        <Link to="/cart" className="btn">Ver carrito</Link>
+        <Link to="/checkout" className="btn btn-success">Finalizar compra</Link>
 
       </div>
 

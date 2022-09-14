@@ -3,9 +3,11 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  padding: 20px 0 0 20px;
 }
 .list-item {
   width: 350px;
+  margin:0 20px 20px 0;
   
 }
 .item-content {
@@ -63,4 +65,22 @@
 .filtros-container {
   background: $ttn-greyLighter;
   padding: 10px 20px;
+}
+/*----------------------Media mobile-----------------*/
+
+@media (max-width: 1100px){
+
+  .list-item {
+    width: 47%;
+}
+
+}
+/*----------------------Media mobile-----------------*/
+
+@media (max-width: 700px){
+
+  .list-item {
+    width: 100%;
+}
+
 }

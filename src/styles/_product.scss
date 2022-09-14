@@ -4,9 +4,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 20px;
 
 }
-
+h1.product-title {
+    line-height: 1em;
+    font-weight: normal;
+}
 .product-image-container {
     margin-right: 20px;
 }
@@ -24,6 +28,9 @@
         padding:0 20px ;
     
     }
+    h1.product-title {
+        font-size: 1.9em;
+    }
 
 }
 /*----------------------Media mobile-----------------*/
@@ -37,6 +44,10 @@
         align-items: center;
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+
+    .product-container .btn.btn-success {
+        width: 100%;
     }
 
 }

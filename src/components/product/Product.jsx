@@ -1,5 +1,5 @@
 import { DataContext } from "../../context/DataProvider";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 
 import SideCart from "../cart/SideCart";
@@ -33,10 +33,10 @@ const Product = () => {
                 </div>
                 <div className="product-info-container">
                 <div className="breadcrumbs">
-                    <a href="/">Volver</a> | {detalle.category}  
+                    <Link to="/">Volver</Link> | {detalle.category}  
                     </div>
-                    <h1>{detalle.title}</h1>
-                    <p>{detalle.description}</p>
+                    <h1 className="product-title">{detalle.title}</h1>
+                    <p  className="product-description" >{detalle.description}</p>
                    <hr></hr>
 
                     <div><button className="btn btn-success"
