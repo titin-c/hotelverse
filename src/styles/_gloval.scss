@@ -14,7 +14,7 @@ body {
 
 .container {
   position: relative;
-  
+
 }
 
 
@@ -22,31 +22,48 @@ header {
   padding: 20px;
   background: $ttn-greyLight;
 }
+
 .logo h2 {
-  margin:0
+  margin: 0
 }
+
 .logo a {
   text-decoration: none;
   color: $ttn-greyDark;
 }
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar{display: flex;}
+.navbar {
+  display: flex;
+}
 
 .navbar a {
   text-decoration: none;
   margin-right: 20px;
   color: $ttn-greyDark;
+  display: block;
+  padding: 7px 10px 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, .5);
+  }
 }
+
 .cart-icon-menu {
   position: relative;
 
   span.item__total {
-    background: rgba($ttn-danger,.9);
+    background: rgba($ttn-danger, .9);
     padding: 5px;
     border-radius: 100%;
     color: $ttn-background-color;
@@ -60,9 +77,10 @@ header {
     position: absolute;
     top: 0;
     left: 15px;
-}
-svg {
-  width: 25px;
-  height: 25px;
-}
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
 }

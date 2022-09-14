@@ -87,6 +87,8 @@
         overflow: hidden;
         width: 170px;
         white-space: nowrap;
+        color:rgba($ttn-greyDark, .6);
+        font-size:.8em
     }
 
     .cart-img {
@@ -108,14 +110,9 @@
 }
 
 .cart-footer {
-    .btn {
+     .btn {
         width: 100%;
-    }
-
-    .btn {
-        width: 100%;
-
-
+        margin-bottom: 5px;
     }
 
     .btn-success {

@@ -11,15 +11,6 @@ const ListItems = () => {
     const [productos] = value.productos;
 
     
-    // const [data, setData] = useState(null)
-
-    // useEffect(() => {
-    //     fetch('https://fakestoreapi.com/products/category/jewelery')
-    //         .then(res => res.json())
-    //         .then((data) => setData(data))
-    //         .then(json => console.log(json))
-    //         .catch(console.log);
-    // }, [])
 
       
     return (

@@ -48,3 +48,18 @@
     color: $ttn-background-color;
 }
 }
+
+.filter-btn {
+    background: $ttn-background-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+
+    &:hover, .active{
+        background: rgba($ttn-background-color, .5);
+    }
+}

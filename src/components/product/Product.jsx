@@ -1,6 +1,6 @@
 import { DataContext } from "../../context/DataProvider";
 import { Link, useParams } from "react-router-dom";
-import { BiHomeAlt } from "react-icons/bi";
+import { BiLeftArrowAlt } from "react-icons/bi";
 
 import SideCart from "../cart/SideCart";
 import { useContext, useEffect, useState } from "react";
@@ -33,13 +33,13 @@ const Product = () => {
                 </div>
                 <div className="product-info-container">
                 <div className="breadcrumbs">
-                    <Link to="/">Volver</Link> | {detalle.category}  
+                <BiLeftArrowAlt/> <Link to="/">Volver</Link>&nbsp;/&nbsp;{detalle.category}  
                     </div>
                     <h1 className="product-title">{detalle.title}</h1>
                     <p  className="product-description" >{detalle.description}</p>
                    <hr></hr>
 
-                    <div><button className="btn btn-success"
+                    <div><button className="btn btn-primary"
                     onClick={() => addCart(detalle.id)}
                     ><span className='price'>{detalle.price}<span className='currency'>€</span></span> Comprar</button></div>
                 </div>

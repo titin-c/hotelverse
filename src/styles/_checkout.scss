@@ -1,5 +1,5 @@
 .checkout-screen-container {
-    width: $widthScreenLg;
+    width: 60%;
     margin: auto;
 }
 
@@ -24,7 +24,13 @@
 .checkout-cart .cart-total {
     padding: 0 0px 40px;
 }
+.checkout-screen-container .cart-footer .btn-success {
+    background-color: $ttn-primary;
+    border-color: $ttn-primary;
 
+    &:hover{
+        background-color: rgba($ttn-primary, .7);}
+}
 .checkout-screen-container .cart-footer>.btn:first-child {
     display: none;
 }

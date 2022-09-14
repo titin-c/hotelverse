@@ -12,10 +12,23 @@ h1.product-title {
     font-weight: normal;
 }
 .product-image-container {
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 .product-image{margin-top: 40px;}
+
+.breadcrumbs {
+    color: #666;
+    display: flex;
+
+    a{color:$ttn-primary;
+    text-decoration: none;}
+
+    svg {
+        width: 40px;
+        height: 23px;
+    }
+}
 
 
 
@@ -30,6 +43,9 @@ h1.product-title {
     }
     h1.product-title {
         font-size: 1.9em;
+    }
+    .product-image-container {
+        margin-right: 50px;
     }
 
 }
@@ -46,8 +62,11 @@ h1.product-title {
         flex-wrap: nowrap;
     }
 
-    .product-container .btn.btn-success {
+    .product-container .btn.btn-primary {
         width: 100%;
+    }
+    .product-image-container {
+        margin-right: 0px;
     }
 
 }
