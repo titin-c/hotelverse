@@ -101,6 +101,10 @@ box-shadow: 0 0 10px 0 rgba($ttn-primary, .1);
   .list-item {
     width: 47%;
   }
+  .price {
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
 
 }
 
@@ -111,5 +115,11 @@ box-shadow: 0 0 10px 0 rgba($ttn-primary, .1);
   .list-item {
     width: 96%;
   }
+  .item-buttons .btn-primary {
+    font-size: .8rem;
+  .price {
+    margin-right: 5px;
+    font-size: 1.1rem;
+  }}
 
 }
