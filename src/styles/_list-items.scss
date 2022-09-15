@@ -5,35 +5,47 @@
   justify-content: space-between;
   padding: 20px 0 0 20px;
 }
+
 .list-item {
   width: 350px;
-  margin:0 20px 20px 0;
-  
+  margin: 0 20px 20px 0;
+  background-color: #FFF;
+
+  -webkit-box-shadow: 0 0 10px 0 rgba($ttn-primary, .1);
+box-shadow: 0 0 10px 0 rgba($ttn-primary, .1);
+
 }
+
 .item-content {
-  padding: 20px ;
-  border-left: solid 1px $ttn-greyLight;
-  border-right: solid 1px $ttn-greyLight;
+  padding: 20px;
+  border-left: solid 1px $ttn-greyLighter;
+  border-right: solid 1px $ttn-greyLighter;
 }
-.item-image{
+
+.item-image {
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: solid 1px $ttn-greyLight;
-  border-left: solid 1px $ttn-greyLight;
-  border-right: solid 1px $ttn-greyLight;
+  border-top: solid 1px $ttn-greyLighter;
+  border-left: solid 1px $ttn-greyLighter;
+  border-right: solid 1px $ttn-greyLighter;
   border-radius: 4px 4px 0 0;
 
-   img{
+  img {
     height: auto;
     max-height: 120px;
     max-width: 200px;
   }
-  
+
 }
+
+.item-category {
+  color: $ttn-greyMedium;
+}
+
 .item-title {
-  font-weight: normal;
+  font-weight: 600;
   width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -41,6 +53,7 @@
   margin: 0;
   padding: 0;
 }
+
 .item-buttons {
   display: flex;
   justify-content: space-between;
@@ -49,15 +62,22 @@
   .btn {
     border: none;
     width: 45%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    width: 55%;
+    text-transform: uppercase;
+  }
 }
-.btn-primary {
-  width: 55%;
-}
-}
-.price{
+
+.price {
+  margin-right: 19px;
   font-size: 1.3rem;
-  .currency{
+
+  .currency {
     opacity: .6;
   }
 }
@@ -69,25 +89,27 @@
   align-items: center;
   justify-content: flex-start;
 
-  .filter-btn{
+  .filter-btn {
     margin-left: 10px;
   }
 }
+
 /*----------------------Media mobile-----------------*/
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
 
   .list-item {
     width: 47%;
-}
+  }
 
 }
+
 /*----------------------Media mobile-----------------*/
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
 
   .list-item {
     width: 96%;
-}
+  }
 
 }

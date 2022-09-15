@@ -10,9 +10,9 @@ export const DataProvider = (props) => {
     const [menu, setMenu] = useState(true);
     // estado del contenido del carrito
     const [cart, setCart] = useState([]);
-// estado del total del carrito
+    // estado del total del carrito
     const [total, setTotal] = useState(0);
-
+    //Cargamos los productos del servidor
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
@@ -21,6 +21,8 @@ export const DataProvider = (props) => {
             .catch(console.log);
     }, [])
 
+
+    //para añadir al carrito comprobamos si ya existe
     const addCart = (id) => {
         const checkId = cart.every(item => {
             return item.id !== id;
@@ -29,11 +31,12 @@ export const DataProvider = (props) => {
             const datas = data.filter(producto => {
                 return producto.id === id
             })
+            //y si no existe lo añadimos
             setCart([...cart, ...datas])
 
         }
         else {
-            alert("Ese producto ya existe")
+            alert("Ese producto ya existe");
         }
 
 
@@ -57,17 +60,19 @@ export const DataProvider = (props) => {
     }, [cart])
 
     useEffect(() => {
-      const getTotal = () =>{
-        const set = cart.reduce((prev, item) =>{
-            return prev + (item.price * item.cantidad)
-        },0)
-        return
-      }
-      getTotal()
+        const getTotal = () => {
+             const setTotal = cart.reduce((prev, item) => {
+                console.log(item.price)
+                return prev + (item.price);
+                
+            }, 0)
+            return 
+        }
+        getTotal()    
     }, [cart])
     
 
-
+    //Exporto los valores para pasarselos a todos los hijos con provider
     const value = {
         productos: [data],
         menu: [menu, setMenu],

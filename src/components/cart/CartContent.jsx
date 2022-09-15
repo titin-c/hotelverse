@@ -1,5 +1,5 @@
 import { DataContext } from "../../context/DataProvider";
-import { BiChevronUp, BiChevronDown, BiTrash } from "react-icons/bi";
+import {  BiTrash } from "react-icons/bi";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -31,7 +31,7 @@ export const CartContent = () => {
       <div className='cart-body'>
 
         {
-          cart.lenght === 0 ? <h2>Carrito vacio</h2> : <>
+          cart.lenght  < 1 ?<h2>Carrito vacio</h2> :  <>
           {
 
             /* listado de productos del carrito */

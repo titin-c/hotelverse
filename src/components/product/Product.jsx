@@ -31,7 +31,7 @@ const Product = () => {
                     </div>
             <div className="product-container">
                 <div className="product-image-container">
-                    <img src={detalle.image} width="300px" height="300px" alt="" className="product-image" />
+                    <img src={detalle.image} width="300px"  alt={detalle.title} className="product-image" />
                 </div>
                 <div className="product-info-container">
                 <div className="breadcrumbs breadcrumbs1">

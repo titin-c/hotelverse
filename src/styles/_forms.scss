@@ -11,6 +11,8 @@
     width: 100%;
     padding: 7px;
     border: 1px solid $ttn-greyLight;
+
+    
 }
 
 .form-check {
@@ -19,6 +21,8 @@
     align-items: center;
     padding: 20px 20px 0px;
     background: $ttn-greyLight;
+
+    label{padding-left: 7px;}
 }
 .form-check:last-child {
     padding: 10px 20px 20px;

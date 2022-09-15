@@ -11,10 +11,14 @@
 }
 
 .checkout-cart {
-    border: solid 1px $ttn-greyLight;
+    border: solid 1px $ttn-greyLighter;
     padding: 20px;
     width: 50%;
     margin-left: 20px;
+    background: #fff;
+
+    -webkit-box-shadow: 0 0 10px 0 rgba($ttn-primary, .1);
+box-shadow: 0 0 10px 0 rgba($ttn-primary, .1);
 }
 
 .checkout-cart .btn-borrar {

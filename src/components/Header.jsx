@@ -28,8 +28,6 @@ const Header = () => {
           >
             <BiCart />
             <span className="item__total">{cart.length}</span>
-
-
           </div>
         </div>
       </div>
