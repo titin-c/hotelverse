@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hotelverse/static/css/main.7b28e5ad.css",
-    "main.js": "/hotelverse/static/js/main.6dc37d19.js",
+    "main.js": "/hotelverse/static/js/main.2171927b.js",
     "static/js/787.83ddc565.chunk.js": "/hotelverse/static/js/787.83ddc565.chunk.js",
     "index.html": "/hotelverse/index.html",
     "main.7b28e5ad.css.map": "/hotelverse/static/css/main.7b28e5ad.css.map",
-    "main.6dc37d19.js.map": "/hotelverse/static/js/main.6dc37d19.js.map",
+    "main.2171927b.js.map": "/hotelverse/static/js/main.2171927b.js.map",
     "787.83ddc565.chunk.js.map": "/hotelverse/static/js/787.83ddc565.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b28e5ad.css",
-    "static/js/main.6dc37d19.js"
+    "static/js/main.2171927b.js"
   ]
 }
