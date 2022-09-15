@@ -12,14 +12,22 @@ export const DataProvider = (props) => {
     const [cart, setCart] = useState([]);
     // estado del total del carrito
     const [total, setTotal] = useState(0);
-    //Cargamos los productos del servidor
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then((data) => setData(data))
-            // .then(json => console.log(json))
-            .catch(console.log);
-    }, [])
+
+    const [loading, setLoading] = useState(false);
+    
+
+    const fetchproducts = async () => {
+        setLoading(true);
+        const req = await fetch(`https://fakestoreapi.com/products`);
+        const data = await req.json();
+        setData(data);
+        setLoading(false);
+      }
+      useEffect(() => {
+        fetchproducts();
+      }, []);
+
+
 
 
     //para añadir al carrito comprobamos si ya existe
@@ -60,15 +68,22 @@ export const DataProvider = (props) => {
     }, [cart])
 
     useEffect(() => {
-        const getTotal = () => {
-             const setTotal = cart.reduce((prev, item) => {
-                console.log(item.price)
-                return prev + (item.price);
+        // const getTotal = () => {
+        //     const setTotal = cart.reduce((prev, item) => {
+        //         console.log(item.price)
+        //         return prev + (item.price);
                 
-            }, 0)
-            return 
-        }
-        getTotal()    
+        //     }, 0)
+        //     return
+        // }
+        // getTotal()
+        const getTotal = () => {
+        const setTotal = cart.reduce((prev, item) => prev + parseInt(item.price), 0);
+        
+        console.log(total);
+    }
+     getTotal()
+
     }, [cart])
     
 
@@ -78,7 +93,8 @@ export const DataProvider = (props) => {
         menu: [menu, setMenu],
         addCart: addCart,
         cart: [cart, setCart],
-        total: [total, setTotal]
+        total: [total, setTotal],
+        loading: [loading, setLoading]
     }
 
     return (

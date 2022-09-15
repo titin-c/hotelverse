@@ -9,9 +9,10 @@ export const CartContent = () => {
   const [total] = value.total;
 
 
-  
+  console.log(total)
   //borrar producto del carrito
   const removeProducto = id => {
+    
     if (window.confirm("¿Quieres borrar el producto?")) {
       cart.forEach((item, index) => {
 
@@ -23,14 +24,15 @@ export const CartContent = () => {
       })
       setCart([...cart])
     }
-
+    
   }
   return (
     <>
 
       <div className='cart-body'>
-
+      
         {
+          
           cart.lenght  < 1 ?<h2>Carrito vacio</h2> :  <>
           {
 
@@ -64,4 +66,5 @@ export const CartContent = () => {
     </>
   )
 }
+
 export default CartContent;
