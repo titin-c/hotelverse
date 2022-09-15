@@ -80,7 +80,7 @@ export const DataProvider = (props) => {
         const getTotal = () => {
         const setTotal = cart.reduce((prev, item) => prev + parseInt(item.price), 0);
         
-        console.log(total);
+        
     }
      getTotal()
 

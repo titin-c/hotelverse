@@ -1,6 +1,6 @@
 import SideCart from './cart/SideCart';
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { DataContext } from "../context/DataProvider";
 import { Item } from './Item';
@@ -13,11 +13,12 @@ const Home = () => {
 
     const [search, setSearch] = useState('');
 
-
-
-    const handleSearch = e => {
+    const  handleSearch = e => {
+        
         setSearch(e.target.value);
     }
+    
+    
 
 
     const filteredProducts = productos.filter(product =>

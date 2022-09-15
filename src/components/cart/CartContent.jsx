@@ -8,8 +8,6 @@ export const CartContent = () => {
   const [cart, setCart] = value.cart;
   const [total] = value.total;
 
-
-  console.log(total)
   //borrar producto del carrito
   const removeProducto = id => {
     
