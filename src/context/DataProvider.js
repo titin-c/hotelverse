@@ -12,9 +12,9 @@ export const DataProvider = (props) => {
     const [cart, setCart] = useState([]);
     // estado del total del carrito
     const [total, setTotal] = useState(0);
-
+    const [cartTotal, setCartTotal] = useState(0.0);
     const [loading, setLoading] = useState(false);
-    
+
 
     const fetchproducts = async () => {
         setLoading(true);
@@ -22,10 +22,10 @@ export const DataProvider = (props) => {
         const data = await req.json();
         setData(data);
         setLoading(false);
-      }
-      useEffect(() => {
+    }
+    useEffect(() => {
         fetchproducts();
-      }, []);
+    }, []);
 
 
 
@@ -68,24 +68,17 @@ export const DataProvider = (props) => {
     }, [cart])
 
     useEffect(() => {
-        // const getTotal = () => {
-        //     const setTotal = cart.reduce((prev, item) => {
-        //         console.log(item.price)
-        //         return prev + (item.price);
-                
-        //     }, 0)
-        //     return
-        // }
-        // getTotal()
         const getTotal = () => {
-        const setTotal = cart.reduce((prev, item) => prev + parseInt(item.price), 0);
+        //creamos nuestro método almacenándola en una variable
+        let cartTotal = cart.reduce((prev, item) => {
+            return prev + item.price;
+        }, 0.0);
         
-        
+        setCartTotal(cartTotal);
     }
      getTotal()
-
-    }, [cart])
     
+    }, [cart])
 
     //Exporto los valores para pasarselos a todos los hijos con provider
     const value = {
@@ -94,6 +87,7 @@ export const DataProvider = (props) => {
         addCart: addCart,
         cart: [cart, setCart],
         total: [total, setTotal],
+        cartTotal: [cartTotal, setCartTotal],
         loading: [loading, setLoading]
     }
 

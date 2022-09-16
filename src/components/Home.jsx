@@ -1,6 +1,6 @@
 import SideCart from './cart/SideCart';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext,  useState } from 'react';
 
 import { DataContext } from "../context/DataProvider";
 import { Item } from './Item';

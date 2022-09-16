@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 export const CartContent = () => {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
-  const [total] = value.total;
+  const [cartTotal] = value.cartTotal;
+
+ 
 
   //borrar producto del carrito
   const removeProducto = id => {
@@ -53,7 +55,7 @@ export const CartContent = () => {
         }
         </>}
       </div>
-      <div className="cart-total">{total}€</div>
+      <div className="cart-total">{cartTotal}€</div>
       {/* botones para el chekout del carrito del side */}
       <div className='cart-footer'>
         <Link to="/cart" className="btn">Ver carrito</Link>
