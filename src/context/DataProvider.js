@@ -5,15 +5,17 @@ export const DataContext = createContext();
 
 export const DataProvider = (props) => {
 
+    // estado para saber si esta cargado
+    const [loading, setLoading] = useState(false);
+    //estado carga de datos
     const [data, setData] = useState([]);
     // gestionamos la visibilidad del carrito side
     const [menu, setMenu] = useState(true);
     // estado del contenido del carrito
     const [cart, setCart] = useState([]);
     // estado del total del carrito
-    const [total, setTotal] = useState(0);
     const [cartTotal, setCartTotal] = useState(0.0);
-    const [loading, setLoading] = useState(false);
+    
 
 
     const fetchproducts = async () => {
@@ -73,8 +75,8 @@ export const DataProvider = (props) => {
         let cartTotal = cart.reduce((prev, item) => {
             return prev + item.price;
         }, 0.0);
-        
-        setCartTotal(cartTotal);
+        //redondeo con 2 decimales
+        setCartTotal(cartTotal.toFixed(2));
     }
      getTotal()
     
@@ -86,7 +88,6 @@ export const DataProvider = (props) => {
         menu: [menu, setMenu],
         addCart: addCart,
         cart: [cart, setCart],
-        total: [total, setTotal],
         cartTotal: [cartTotal, setCartTotal],
         loading: [loading, setLoading]
     }
