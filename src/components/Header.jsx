@@ -9,8 +9,11 @@ const Header = () => {
   const [menu, setMenu] = value.menu;
   const [cart, setCart] = value.cart;
 
-  const toogleCart = () => {
+  const handleToogleCart = () => {
     setMenu(!menu)
+  }
+  const handleFalseCart = () => {
+    setMenu(false)
   }
 
   return (
@@ -18,13 +21,13 @@ const Header = () => {
       <div className="header-content">
         <div className="logo">
           <h2>
-            <Link to="/">Hotelverse.</Link>
+            <Link onClick={handleFalseCart} to="/" >Hotelverse.</Link>
           </h2>
         </div>
         <div className="navbar">
-          <Link to="/">Tienda</Link>
+          <Link onClick={handleFalseCart} to="/">Tienda</Link>
           <div className="cart-icon-menu"
-            onClick={toogleCart}
+            onClick={handleToogleCart}
           >
             <BiCart />
             <span className="item__total">{cart.length}</span>
